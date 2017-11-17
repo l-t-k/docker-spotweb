@@ -1,0 +1,13 @@
+#!/usr/bin/with-contenv bash
+
+# make our folders and links
+mkdir -p \
+	/config/{log/spotweb,crontabs}
+
+# copy crontab if needed
+[[ ! -f /config/crontabs/root ]] && \
+	cp /etc/crontabs/root /config/crontabs/root
+
+# link user crontab
+rm /etc/crontabs/root
+ln -s /config/crontabs/root /etc/crontabs/root
