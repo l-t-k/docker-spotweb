@@ -1,0 +1,4 @@
+#min        hour    day     month   weekday   command
+
+#retrieve spots every 15 minutes
+#*/15       *       *       *       *         /usr/bin/php /config/www/spotweb/retrieve.php >> /config/log/retrieve.log 2>&1
