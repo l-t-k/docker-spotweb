@@ -1,0 +1,5 @@
+#!/usr/bin/with-contenv bash
+
+# fetch site
+[[ ! -d /config/www/spotweb/.git ]] && \
+git clone https://github.com/spotweb/spotweb /config/www/spotweb
