@@ -6,11 +6,11 @@ ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2
 # install packages
 RUN \
  apk add --no-cache \
-	curl \
+ 	curl \
 	php7-bz2 \
 	php7-curl \
-  php7-gd \
-  php7-gettext \
+	php7-gd \
+	php7-gettext \
 	php7-dom \
 	php7-exif \
 	php7-gd \
@@ -18,7 +18,7 @@ RUN \
 	php7-mcrypt \
 	php7-mysqlnd \
 	php7-pdo_mysql \
-  php7-xml \
+	php7-xml \
 	php7-xmlreader \
 	php7-zip
 
