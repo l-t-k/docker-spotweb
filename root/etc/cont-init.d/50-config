@@ -11,3 +11,13 @@ mkdir -p \
 # link user crontab
 rm /etc/crontabs/root
 ln -s /config/crontabs/root /etc/crontabs/root
+
+# logfiles needed by spotweb retrieve
+[[ ! -f /config/log/spotweb/retrieve.log ]] && \
+	touch /config/log/spotweb/retrieve.log
+
+# permissions
+chown -R abc:abc \
+	/config
+chmod -R 0644 /etc/logrotate.d
+chmod -R +r /config/log
