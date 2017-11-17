@@ -1,8 +1,5 @@
 FROM lsiobase/alpine.nginx:3.6
 
-# environment settings
-ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2
-
 # install packages
 RUN \
  apk add --no-cache \
@@ -22,9 +19,9 @@ RUN \
 	php7-xmlreader \
 	php7-zip
 
-# install app
-RUN \
- git clone --depth 1 https://github.com/spotweb/spotweb /config/www/spotweb
-
 # add local files
 COPY root/ /
+
+# ports and volumes
+EXPOSE 80
+VOLUME /config
