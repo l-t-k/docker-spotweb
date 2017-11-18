@@ -6,7 +6,7 @@ mkdir -p \
 
 # copy spotweb retrieve file if not present in cron
 [[ ! -f /etc/periodic/15min/retrieve.sh ]] && \
-cp /etc/defaults/retrieve.sh /etc/periodic/15min/retrieve.sh
+cp /defaults/retrieve.sh /etc/periodic/15min/retrieve.sh
 
 # link spotweb retrieve file if not present in config
 [[ ! -f /config/spotweb/retrieve.sh ]] && \
