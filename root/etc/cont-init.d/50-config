@@ -2,11 +2,15 @@
 
 # make our folders and links
 mkdir -p \
-	/config/log/spotweb
+	/config/{log/spotweb,spotweb}
 
-# link spotweb retrieve file if not present
-[[ ! -f /etc/periodic/15min/spotweb ]] && \
-ln -s /config/spotweb/retrieve /etc/periodic/15min/spotweb
+# copy spotweb retrieve file if not present in cron
+[[ ! -f /etc/periodic/15min/retrieve ]] && \
+cp /etc/defaults/retrieve /etc/periodic/15min/retrieve
+
+# link spotweb retrieve file if not present in config
+[[ ! -f /config/spotweb/retrieve ]] && \
+ln -s /etc/periodic/15min/retrieve /config/spotweb/retrieve
 
 # logfiles needed by spotweb retrieve
 [[ ! -f /config/log/spotweb/retrieve.log ]] && \
