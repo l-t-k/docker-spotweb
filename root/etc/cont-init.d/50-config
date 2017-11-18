@@ -2,7 +2,7 @@
 
 # make our folders and links
 mkdir -p \
-	/config/{log/spotweb,spotweb}
+	/config/{log/spotweb,spotweb,crontabs}
 
 # copy crontab and proxy defaults if needed
 [[ ! -f /config/crontabs/root ]] && \
