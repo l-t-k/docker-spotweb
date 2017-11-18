@@ -2,15 +2,11 @@
 
 # make our folders and links
 mkdir -p \
-	/config/{log/spotweb,crontabs}
+	/config/{log/spotweb}
 
-# copy crontab if needed
-[[ ! -f /config/crontabs/root ]] && \
-	cp /etc/crontabs/root /config/crontabs/root
-
-# link user crontab
-rm /etc/crontabs/root
-ln -s /config/crontabs/root /etc/crontabs/root
+# link spotweb retrieve file if not present
+[[ ! -f /etc/periodic/15min/spotweb ]] && \
+ln -s /config/spotweb/retrieve /etc/periodic/15min/spotweb
 
 # logfiles needed by spotweb retrieve
 [[ ! -f /config/log/spotweb/retrieve.log ]] && \
