@@ -6,7 +6,7 @@ mkdir -p \
 
 # copy ownsettings.php if needed
 [[ ! -f /config/www/spotweb/ownsettings.php ]] && \
-	cp /app/ownsetings.php /config/www/spotweb/ownsettings.php
+	cp /defaults/ownsetings.php /config/www/spotweb/ownsettings.php
 
 # copy crontab and proxy defaults if needed
 [[ ! -f /config/crontabs/root ]] && \
