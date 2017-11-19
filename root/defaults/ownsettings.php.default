@@ -8,6 +8,7 @@
 $settings['sabnzbd']['categories'] = Array(
 		0	=> Array('default' 	=> "movies",				# Default categorie when nothing else matches
 					 'a5'		=> "books",
+					 'a11'		=> "books",
 					 'd2'		=> "other",
 					 'd11'		=> "tv",
 					 'd29'		=> "other"),
