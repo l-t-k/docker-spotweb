@@ -5,5 +5,5 @@
 0       2       *       *       *       run-parts /etc/periodic/daily
 0       3       *       *       6       run-parts /etc/periodic/weekly
 0       5       1       *       *       run-parts /etc/periodic/monthly
-# retrieve spots
-*/15    *       *       *       *       /app/retrieve.sh >> /config/log/spotweb/retrieve.log 2>&1
+# After initial retrieve, uncomment line underneath and RESTARTcontainer to automatically retrieve spots every 15 minutes
+#*/15    *       *       *       *       /app/retrieve.sh >> /config/log/spotweb/retrieve.log 2>&1
