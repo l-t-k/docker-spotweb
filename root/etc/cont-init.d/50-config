@@ -2,7 +2,11 @@
 
 # make our folders and links
 mkdir -p \
-	/config/{log/spotweb,spotweb,crontabs}
+	/config/{log/spotweb,crontabs}
+
+# copy ownsettings.php if needed
+[[ ! -f /config/www/spotweb/ownsettings.php ]] && \
+	cp /app/ownsetings.php /config/www/spotweb/ownsettings.php
 
 # copy crontab and proxy defaults if needed
 [[ ! -f /config/crontabs/root ]] && \
